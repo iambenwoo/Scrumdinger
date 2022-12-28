@@ -17,7 +17,7 @@ struct ScrumdingerApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                DailyScrumsView(dailyScrums: $store.scrums){
+                DailyScrumsLandingView(dailyScrums: $store.scrums){
                     //                    ScrumStore.save(scrums: store.scrums) { result in
                     //                        if case .failure(let error) = result {
                     //                            fatalError(error.localizedDescription)
