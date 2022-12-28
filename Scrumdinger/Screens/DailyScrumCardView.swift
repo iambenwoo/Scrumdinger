@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DailyScrumsCardView: View {
+struct DailyScrumCardView: View {
     // Input parameter of Daily Scrum
     let dailyScrum: DailyScrum
     var body: some View {
@@ -32,10 +32,10 @@ struct DailyScrumsCardView: View {
     }
 }
 
-struct DailyScrumsCardView_Previews: PreviewProvider {
+struct DailyScrumCardView_Previews: PreviewProvider {
     static var dailyScrum = DailyScrum.sampleData[0]
     static var previews: some View {
-        DailyScrumsCardView(dailyScrum: dailyScrum)
+        DailyScrumCardView(dailyScrum: dailyScrum)
             .background(dailyScrum.theme.mainColor)
             .previewLayout(.fixed(width: 400, height: 60))
     }

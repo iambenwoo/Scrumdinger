@@ -1,5 +1,5 @@
 //
-//  ScrumsView.swift
+//  DailyScrumsLandingView.swift
 //  Scrumdinger
 //
 //  Created by Ben Woo on 8/10/2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DailyScrumsView: View {
+struct DailyScrumsLandingView: View {
     // @Binding to scrums
     @Binding var dailyScrums: [DailyScrum]
     @Environment(\.scenePhase) private var scenePhase
@@ -29,7 +29,7 @@ struct DailyScrumsView: View {
                 // ** Pass $dailyScrum as Binding for "Edit"
                 NavigationLink(destination: DailyScrumDetailView(dailyScrum: $dailyScrum)) {
                     // For Card View it need not a "Binding"
-                    DailyScrumsCardView(dailyScrum: dailyScrum)
+                    DailyScrumCardView(dailyScrum: dailyScrum)
                 }
                 .listRowBackground((dailyScrum.theme.mainColor))
             }
@@ -71,10 +71,10 @@ struct DailyScrumsView: View {
     }
 }
 
-struct ScrumsView_Previews: PreviewProvider {
+struct DailyScrumsLandingView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DailyScrumsView(dailyScrums: .constant(DailyScrum.sampleData), saveAction: {})
+            DailyScrumsLandingView(dailyScrums: .constant(DailyScrum.sampleData), saveAction: {})
         }
     }
 }
